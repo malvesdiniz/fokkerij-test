@@ -1,0 +1,26 @@
+.horse-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-actions {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+}
+
+.file-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

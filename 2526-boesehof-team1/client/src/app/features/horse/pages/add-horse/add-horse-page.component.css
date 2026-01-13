@@ -1,0 +1,16 @@
+.form-card {
+  padding: var(--space-6);
+}
+
+.page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: linear-gradient(180deg, var(--primary-50) 0%, transparent 100%);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: -1;
+}

@@ -1,0 +1,68 @@
+<nav class="bottom-nav" aria-label="Hoofdnavigatie">
+  @for (item of navItems; track item.path) {
+  <a [routerLink]="item.path" routerLinkActive="bottom-nav__item--active" class="bottom-nav__item">
+    <span class="bottom-nav__icon">
+      @switch (item.icon) { @case ('dashboard') {
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="14" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+      </svg>
+      } @case ('horse') {
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M22 2L19 5" />
+        <path d="M16 3L19 5L17 8" />
+        <path d="M19 5C19 5 14 6 12 9C10 12 9 18 4 20" />
+        <path d="M4 20L2 22" />
+        <path d="M7 17L4 20" />
+        <path d="M16 10C15 11 14 14 14 16" />
+      </svg>
+      } @case ('breeding') {
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+        />
+      </svg>
+      } @case ('journal') {
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
+        />
+        <path d="M8 11h8" />
+        <path d="M8 7h6" />
+      </svg>
+      } }
+    </span>
+    <span class="bottom-nav__label">{{ item.label }}</span>
+  </a>
+  }
+</nav>

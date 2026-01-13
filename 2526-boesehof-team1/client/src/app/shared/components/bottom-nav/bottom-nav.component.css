@@ -1,0 +1,20 @@
+.bottom-nav__label {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+.bottom-nav__item--active {
+  position: relative;
+}
+
+.bottom-nav__item--active::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 3px;
+  background: var(--primary-500);
+  border-radius: var(--radius-full);
+}

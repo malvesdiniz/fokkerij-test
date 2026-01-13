@@ -1,0 +1,104 @@
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <div class="header-titles">
+      <h1>Tinkerstal T Boesehof</h1>
+      <p>Fokkerij Dashboard</p>
+    </div>
+    <i class="pi pi-sign-out logout-icon"></i>
+  </header>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-content">
+        <span class="stat-label">Totaal paarden</span>
+        <span class="stat-value">{{ stats.totalPaarden }}</span>
+      </div>
+      <div class="stat-icon gray"><i class="pi pi-users"></i></div>
+    </div>
+
+    <div class="stat-card green-bg">
+      <div class="stat-content">
+        <span class="stat-label">Drachtige merries</span>
+        <span class="stat-value">{{ stats.drachtigeMerries }}</span>
+      </div>
+      <div class="stat-icon white-transp"><i class="pi pi-face-smile"></i></div>
+    </div>
+
+    <div class="stat-card teal-bg">
+      <div class="stat-content">
+        <span class="stat-label">Gedekte merries</span>
+        <span class="stat-value">1</span>
+      </div>
+      <div class="stat-icon white-transp"><i class="pi pi-heart"></i></div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-content">
+        <span class="stat-label">Veulens dit jaar</span>
+        <span class="stat-value">{{ stats.veulensDitJaar }}</span>
+        <span class="stat-year">{{ stats.jaar }}</span>
+      </div>
+      <div class="stat-icon light-green"><i class="pi pi-face-smile"></i></div>
+    </div>
+  </div>
+
+  <section class="list-section">
+    <div class="section-header">
+      <h2>Verwachte geboorten</h2>
+      <a href="#">Bekijk alles</a>
+    </div>
+
+    <div *ngFor="let item of verwachteGeboorten" class="list-item">
+      <div class="item-icon-circle yellow-bg">
+        <i class="pi pi-clock"></i>
+      </div>
+      <div class="item-info">
+        <span class="item-name">{{ item.naam }}</span>
+        <span class="item-sub">Uitgerekend: {{ item.datum }}</span>
+      </div>
+      <div class="item-days orange-text">
+        <span class="days-val">{{ item.dagen }}</span>
+        <span class="days-label">dagen</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="list-section">
+    <div class="section-header">
+      <h2>Lopende dekkingen</h2>
+      <a href="#">Bekijk alles</a>
+    </div>
+
+    <div *ngFor="let item of lopendeDekkingen" class="list-item">
+      <div class="item-icon-circle mint-bg">
+        <i class="pi pi-clock"></i>
+      </div>
+      <div class="item-info">
+        <span class="item-name">{{ item.naam }}</span>
+        <span class="item-sub">{{ item.status }}</span>
+      </div>
+      <div class="item-days teal-text">
+        <span class="days-val">{{ item.dagen }}</span>
+        <span class="days-label">dagen</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="list-section">
+    <div class="section-header">
+      <h2>Snelle acties</h2>
+    </div>
+
+    <div class="actions-grid">
+      <button class="action-card" routerLink="/horses/add">
+        <i class="pi pi-plus"></i>
+        <span>Paard toevoegen</span>
+      </button>
+
+      <button class="action-card">
+        <i class="pi pi-heart"></i>
+        <span>Dekking registreren</span>
+      </button>
+    </div>
+  </section>
+</div>
